@@ -1,0 +1,54 @@
+# macOS / editor noise
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# LaTeX intermediates
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# Local run logs and heavyweight generated caches
+logs/
+data/cache/
+results/task1/
+results/task2/
+results/task3/
+*.pkl
+
+# Private/submission-administration files and duplicated archives
+AMF Policy/
+AMF_Revision_Plan.md
+AMF_Path_A_Revision_Plan.md
+AMF_Path1_Plan_R2.md
+paper.zip
+paper/cover_letter.tex
+paper/cover_letter.pdf
+*.zip
+MFM5220_Final_Project*.pdf
+Reference.pdf
+essay/
+Taylor___Francis_LaTeX_template_for_authors__Interact_layout___APA_reference_style_/
+notebooks/
+
+# Generated smoke figures not used by the paper
+figures/*smoke*.pdf
+figures/*revised*.pdf

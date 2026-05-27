@@ -1,0 +1,32 @@
+name: "Regime II -- Institutional Scale"
+
+physical:
+  T: 600.0
+  Q0: 100
+  S0: 30.0
+  sigma: 0.01
+  lam: 0.8333333333333334
+  kappa: 100.0
+  xi: 0.005
+  alpha: 1.0e-5
+  phi: 1.0e-6
+
+grid:
+  fd_dt: 0.05
+  env_dt: 1.0
+  sim_dt: 0.1
+  n_depth: 21
+
+rl:
+  budgets: [1000, 3162, 10000, 31623, 100000, 316227, 1000000]
+  n_seeds_full: 20
+  n_eval_paths_full: 2000
+
+calibration:
+  prior_kappa: 100.0
+  prior_lam: 0.8333333333333334
+
+notes:
+  - "Inventory and horizon are scaled by 10x relative to the CJP small-scale regime."
+  - "lambda is kept at the CJP value because Q0 and T are both scaled by 10x, preserving lambda*T/Q0."
+  - "alpha and phi are rescaled following AMF_Path1_Plan_R2.md."

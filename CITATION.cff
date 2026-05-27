@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: >-
+  Sample Complexity of Calibration versus Model-Free Learning in
+  Cartea-Jaimungal-Penalva Optimal Liquidation
+message: "If you use this software, please cite the accompanying manuscript."
+authors:
+  - family-names: Ouyang
+    given-names: Wendi
+    email: 122010063@link.cuhk.edu.cn
+type: software
+version: 1.0.0
+date-released: "2026-05-27"
+repository-code: "https://github.com/VernonOY/amf-cjp-liquidation-benchmark"
+license: "MIT"
+keywords:
+  - optimal execution
+  - optimal liquidation
+  - quasi-variational inequality
+  - reinforcement learning
+  - sample complexity
+  - limit order book
+  - stochastic intensity
+  - Cox-Ingersoll-Ross intensity
+abstract: >-
+  Code and data accompanying the Applied Mathematical Finance submission
+  "Sample Complexity of Calibration versus Model-Free Learning in
+  Cartea-Jaimungal-Penalva Optimal Liquidation." The repository contains
+  finite-difference QVI solvers, reinforcement-learning baselines, a plug-in
+  MLE calibrator, CIR stochastic-intensity experiments, robustness sweeps, and
+  manuscript source files.

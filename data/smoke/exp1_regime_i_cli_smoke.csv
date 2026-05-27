@@ -1,0 +1,2 @@
+agent,n,seed,value_err_rmse,policy_err_l1,premium_vs_twap,premium_ci_low,premium_ci_high,clearance_prob,wall_clock_sec,kappa_hat
+D_plugin,200,0,0.007782197777810215,0.004280773453786846,0.23407441976384574,0.09523922523542944,0.3768973406185536,0.36,0.20176982879638672,67.82026505035793
