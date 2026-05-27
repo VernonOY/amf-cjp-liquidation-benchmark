@@ -11,9 +11,10 @@ Snapshots are produced by `tests/_golden/regenerate.py`. They cover:
   - Step-by-step (state, action, reward) trace of the legacy env
 
 Bit-identical comparison (atol=rtol=0) is used wherever the upstream code is
-itself deterministic (FD solver, analytic, env step). The MC test uses a
-tighter `assert_allclose` with rtol=0 atol=0 — the simulator is seeded and
-event-driven, so it should also be bit-identical.
+itself deterministic and platform-stable (FD solver, env step). The analytic
+omega curves use a strict floating-point tolerance because NumPy/Python
+platform combinations can differ at the 1e-14 level in quadrature roundoff.
+The MC test remains bit-identical: the simulator is seeded and event-driven.
 """
 from __future__ import annotations
 import sys
@@ -53,8 +54,8 @@ def test_omega_q1_q2_bit_identical(golden_dir):
     t = snap["t"]
     om1 = np.asarray(omega_q1(TASK2, t), dtype=np.float64)
     om2 = np.asarray(omega_q2(TASK2, t), dtype=np.float64)
-    np.testing.assert_array_equal(om1, snap["omega_q1"])
-    np.testing.assert_array_equal(om2, snap["omega_q2"])
+    np.testing.assert_allclose(om1, snap["omega_q1"], rtol=1e-12, atol=1e-12)
+    np.testing.assert_allclose(om2, snap["omega_q2"], rtol=1e-12, atol=1e-12)
 
 
 # ---------------------------------------------------------------------------
